@@ -18,3 +18,31 @@ body {
     text-align: center;
     color: white;
 }
+
+/* Main content panel */
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main form area */
+
+#sign-up-form {
+    margin: 10px 0px 50px;
+    display: flex;
+    gap: 50px;
+}
+
+#sign-up-form label {
+    display: block;
+}
+
+input {
+    margin-bottom: 10px;
+    display: block;
+}
+
+
