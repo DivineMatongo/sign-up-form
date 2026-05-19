@@ -40,8 +40,15 @@ body {
     display: block;
 }
 
+.error {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    height: 1em;
+    font-size: x-small;
+    color: crimson;
+}
+
 input {
-    margin-bottom: 10px;
     display: block;
 }
 
