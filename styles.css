@@ -18,6 +18,7 @@ body {
     display: flex;
     height: 100vh;
     margin: 0px;
+    font-family: 'Roboto';
 }
 
 /* Left logo panel */
