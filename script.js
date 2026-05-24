@@ -66,20 +66,32 @@ function realtimeValidation(e) {
 function flagError(input) {
     if (input.id === FIRST) {
         firstNameError.textContent = `* ${NAME_ERR}`;
+        firstNameError.classList.remove("solved");
+        firstNameError.classList.add("flag");
     } else if (input.id === EMAIL) {
         emailError.textContent = `* ${EMAIL_ERR}`;
+        emailError.classList.remove("solved");
+        emailError.classList.add("flag");
     } else if (input.id === PHONE) {
         phoneError.textContent = `* ${PHONE_ERR}`;
+        phoneError.classList.remove("solved");
+        phoneError.classList.add("flag");
     }
 }
 
 function solveError(input) {
     if (input.id === FIRST) {
         firstNameError.textContent = `✓ ${NAME_ERR}`;
+        firstNameError.classList.remove("flag");
+        firstNameError.classList.add("solved");
     } else if (input.id === EMAIL) {
         emailError.textContent = `✓ ${EMAIL_ERR}`;
-    } else if (input.id === PHONE) {
+        emailError.classList.remove("flag");
+        emailError.classList.add("solved");
+} else if (input.id === PHONE) {
         phoneError.textContent = `✓ ${PHONE_ERR}`;
+        phoneError.classList.remove("flag");
+        phoneError.classList.add("solved");
     }
 }
 
@@ -122,11 +134,15 @@ function parseWord() {
 }
 
 function confirmPassword() {
-    if (confirmInput.value !== passwordInput.value) {
+    if (confirmInput.value && confirmInput.value === passwordInput.value) {
+        confirmInput.setCustomValidity("");
+        confirmError.classList.add("solved");
+        confirmError.classList.remove("flag");
+    } else {
         confirmInput.setCustomValidity("Passwords do not match");
         confirmError.textContent = `* ${CONFIRM_ERR}`;
-    } else {
-        confirmInput.setCustomValidity("");
+        confirmError.classList.add("flag");
+        confirmError.classList.remove("solved");
     }
 }
 
@@ -157,8 +173,12 @@ function parsePhone() {
         phoneError.textContent = "";
     } else if (phoneIsValid()) {
         phoneInput.setCustomValidity("");
+        phoneError.classList.add("solved");
+        phoneError.classList.remove("flag");
     } else {
         phoneInput.setCustomValidity("Invalid format");
         phoneError.textContent = `* ${PHONE_ERR}`;
+        phoneError.classList.add("flag");
+        phoneError.classList.remove("solved");
     }
 }

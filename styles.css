@@ -74,15 +74,15 @@ input.validate:valid {
 
 }
 
-input:valid + .error, .solved {
-    color: var(--valid-fore);
-}
-
 input.validate:invalid {
     border: var(--invalid-fore) 2px solid;
     background-color: var(--invalid-back);
 }
 
-input:invalid + .error, .flag {
+.solved {
+    color: var(--valid-fore);
+}    
+
+.flag {
     color: var(--invalid-fore);
 }    
