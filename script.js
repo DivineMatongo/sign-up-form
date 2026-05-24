@@ -13,7 +13,7 @@ const
     PASS_ERR_1 = "At least 8 characters long",
     PASS_ERR_2 = "At least one number [0-9] required",
     PASS_ERR_3 = "At least one symbol required",
-    CONFIRM_ERR = "Passwords do not match";
+    CONFIRM_ERR = "Passwords must match";
 
 const
     form = document.querySelector("form");
@@ -136,6 +136,7 @@ function parseWord() {
 function confirmPassword() {
     if (confirmInput.value && confirmInput.value === passwordInput.value) {
         confirmInput.setCustomValidity("");
+        confirmError.textContent = `✓ ${CONFIRM_ERR}`;
         confirmError.classList.add("solved");
         confirmError.classList.remove("flag");
     } else {
@@ -173,6 +174,7 @@ function parsePhone() {
         phoneError.textContent = "";
     } else if (phoneIsValid()) {
         phoneInput.setCustomValidity("");
+        phoneError.textContent = `✓ ${PHONE_ERR}`;
         phoneError.classList.add("solved");
         phoneError.classList.remove("flag");
     } else {

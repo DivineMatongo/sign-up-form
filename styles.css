@@ -1,6 +1,6 @@
 :root {
     --invalid-fore: crimson;
-    --invalid-back: #ff00000f;
+    --invalid-back: #ff000019;
     --valid-fore: green;
     --valid-back: #00ff0010;
 }
@@ -86,7 +86,7 @@ body {
     display: block;
     margin-top: 5px;
     margin-bottom: 15px;
-    height: 1em;
+    height: 1.5em;
     font-size: x-small;
 }
 
