@@ -5,6 +5,15 @@
     --valid-back: #00ff0010;
 }
 
+@font-face {
+    font-family: "Norse-Bold";
+    src:
+        url("fonts/norse/Norse-Bold.woff2")
+        format("woff2"),
+        url("fonts/norse/Norse-Bold.woff")
+        format("woff");
+}
+
 body {
     display: flex;
     height: 100vh;
@@ -24,6 +33,8 @@ body {
     width: 100%;
     text-align: center;
     color: white;
+    font-family: "Norse-Bold";
+    font-size: 64px;
 }
 
 /* Main content panel */
