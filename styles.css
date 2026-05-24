@@ -17,12 +17,13 @@
 body {
     display: flex;
     height: 100vh;
+    margin: 0px;
 }
 
 /* Left logo panel */
 
 .logo-panel {
-    flex: 0 0 25%;
+    flex: 0 0 35%;
     position: relative;
     background-color: darkgreen;
     background-image: url("images/background.jpg");
@@ -53,7 +54,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 40px;
 }
 
 /* Main form area */
