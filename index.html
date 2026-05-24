@@ -23,16 +23,20 @@
             <form id="sign-up-form" action=""novalidate>
                 <div>
                     <label for="first-name">FIRST NAME</label>
-                    <input type="text" name="first-name" id="first-name" tabindex="1">
+                    <input type="text" required name="first-name" id="first-name" tabindex="1">
                     <label for="first-name" class="error"></label>
                     
                     <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email" tabindex="3">
+                    <input type="email" required name="email" id="email" tabindex="3">
                     <label for="email" class="error"></label>
 
                     <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password" tabindex="5">
-                    <label for="password" class="error"></label>
+                    <input type="password" required name="password" id="password" tabindex="5">
+                    <div>
+                        <label for="password" id="rule-1" class="error"></label>
+                        <label for="password" id="rule-2" class="error"></label>
+                        <label for="password" id="rule-3" class="error"></label>
+                    </div>
                 </div>
                 <div>
                     <label for="last-name">LAST NAME</label>
@@ -40,12 +44,12 @@
                     <label for="last-name" class="error"></label>
                     
                     <label for="phone">PHONE NUMBER</label>
-                    <input type="text" name="phone" id="phone" tabindex="4">
+                    <input type="tel" name="phone" id="phone" tabindex="4">
                     <label for="phone" class="error"></label>
                     
                     <label for="confirm-pass">CONFIRM PASSWORD</label>
-                    <input type="password" name="confirm-pass" id="confirm-pass" tabindex="6">
-                    <label for="confirm-password" class="error"></label>
+                    <input type="password" required name="confirm-pass" id="confirm-pass" tabindex="6">
+                    <label for="confirm-pass" class="error"></label>
                 </div>
             </form>
             <div class="form-footer">

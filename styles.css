@@ -1,3 +1,10 @@
+:root {
+    --invalid-fore: crimson;
+    --invalid-back: #ff00000f;
+    --valid-fore: green;
+    --valid-back: #00ff0010;
+}
+
 body {
     display: flex;
     height: 100vh;
@@ -36,7 +43,7 @@ body {
     gap: 50px;
 }
 
-#sign-up-form label {
+#sign-up-form label, #sign-up-form input {
     display: block;
 }
 
@@ -45,15 +52,37 @@ body {
     margin-bottom: 15px;
     height: 1em;
     font-size: x-small;
-    color: crimson;
+}
+
+.error[for="password"] {
+    margin-bottom: 0px;
 }
 
 input {
-    display: block;
+    border-radius: 3px;
+    border: grey solid 1px;
 }
 
-input:invalid {
-    outline: red solid 1px;
+input:focus {
+    box-shadow: 2px 2px 5px grey;
+    outline: none;
 }
 
+input.validate:valid {
+    border: var(--valid-fore) 2px solid;
+    background-color: var(--valid-back);
 
+}
+
+input:valid + .error, .solved {
+    color: var(--valid-fore);
+}
+
+input.validate:invalid {
+    border: var(--invalid-fore) 2px solid;
+    background-color: var(--invalid-back);
+}
+
+input:invalid + .error, .flag {
+    color: var(--invalid-fore);
+}    
