@@ -3,6 +3,7 @@
     --invalid-back: #ff000019;
     --valid-fore: green;
     --valid-back: #00ff0010;
+    --theme-green: #596D48;
 }
 
 @font-face {
@@ -54,8 +55,9 @@ body {
 .form-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 20px 40px;
+    justify-content: start;
+    gap: 20px;
+    width: 100%;
 }
 
 .form-header {
@@ -65,8 +67,19 @@ body {
 
 /* Main form area */
 
+.form-top {
+    box-shadow: 0px 0px 10px grey;
+    padding-left: 40px;
+}
+
+.form-footer {
+    padding-left: 40px;
+}
+
+/* Form fields */
+
 #sign-up-form {
-    margin: 10px 0px 50px;
+    margin: 10px 0px;
     display: flex;
     gap: 50px;
 }
@@ -122,3 +135,25 @@ input.validate:invalid {
 .flag {
     color: var(--invalid-fore);
 }    
+
+/* Form footer area */
+
+button {
+    width: 150px;
+    height: 35px;
+    border-radius: 7px;
+    background-color: var(--theme-green);
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+a:link, a:visited {
+    color: var(--theme-green);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.form-footer {
+    font-size: smaller;
+}
